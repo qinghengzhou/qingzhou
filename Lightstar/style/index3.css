@@ -1,0 +1,257 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "HarmonyOS Sans sc";
+}
+body{
+	overflow-x: hidden;
+	background-color: #f2f2f2;
+	width: 100vw;
+	height: 100vh;
+}
+a{
+	text-decoration: none;
+}
+input,button{
+	outline: none;
+	border: none;
+}
+li{
+	list-style: none;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-bottom: 2px solid #e6e5e5;
+}
+.head{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo{
+    width: 200px;
+    height: 80px;
+    /* 显示 */
+    color: white;
+    line-height: 80px;
+    text-align: center;
+    background-color: black;
+    font-size: 50px;
+}
+.head p{
+    font-size: 30px;
+    font-weight: bold;
+}
+footer{
+    width: 100%;
+    height: 180px;
+    padding: 20px;
+    background-color: black;
+    margin-top: 80px;
+}
+.foot{
+    width: 1200px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.white_logo{
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    line-height: 100px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: .2em;
+    font-weight: 900;
+}
+.end_massage{
+    color: white;
+    font-size: 26px;
+    letter-spacing: .2em;
+    font-weight: 500;
+}
+.end_massage p{
+    margin-top: 20px;
+}
+.search input{
+    width: 460px;
+    border: 1px solid #565656;
+    background-color: #faf8f8;
+    height: 50px;
+    padding-left: 60px;
+    padding-right: 20px;
+    background: url(../images/搜索.png) no-repeat;
+    background-size: 40px;
+    background-position: 10px;
+    font-size: 23px;
+}
+.item_head{
+    font-size: 24px;
+    transition: .3s ease;
+    color: #7f7f7f;
+}
+.item_head:hover{
+    color: black;
+    text-shadow: 1px 1px  rgb(67, 67, 67);
+}
+#login{
+    display: inline-block;
+    width: 32PX;
+    height: 32PX;
+    padding: 10px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    color: #565656;
+    transition: .3s ease;
+}
+#login:hover{
+    background-color: #7a7a7a;
+    color: #d9d9d9;
+}
+.nav{
+    width: 100%;
+    height: auto;
+    border-bottom:1px solid #7f7f7f;
+    margin-top: 40px;
+}
+.navbar{
+    width: 1200px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0 auto;
+}
+.navbar li:nth-child(1){
+    width: 140px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    text-align: center !important;
+    font-size: 40px !important;
+}
+.nav li{
+    margin-right: 20px;
+    width: 200px;
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    
+}
+.nav li a{color: black;}
+.first_container{
+	width: 100%;
+	height: auto;;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.heart{
+	width: 1200px;
+	height: 300px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid #d9d9d9;
+}
+.heart .banner1{
+	width: 14%;
+	height: 100%;
+	font-size: 36px;
+}
+.heart .banner1 div{
+	margin-top: 20px;
+}
+.heart .banner2{
+	width: 80%;
+	height:100% ;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.heart .banner2 div{
+	width: 22%;
+	height: 100%;
+	background:url(../images/4-1.png) no-repeat center;
+	background-size: 80% auto;
+    background-color: #a8a8a8;
+}
+.heart .banner2 div:nth-child(2){
+    background:url(../images/4-2.png) no-repeat center;
+	background-size: 80% auto;
+    background-color: #a8a8a8;
+}
+.heart .banner2 div:nth-child(3){
+    background:url(../images/4-3.png) no-repeat center;
+	background-size: 80% auto;
+    background-color: #a8a8a8;
+}
+.heart .banner2 div:nth-child(4){
+    background:url(../images/4-4.png) no-repeat center;
+	background-size: 80% auto;
+    background-color: #a8a8a8;
+}
+.heart .banner3{
+	width: 6%;
+	height: 100%;
+	font-size: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #d9d9d9;
+	border-right: none;
+	border-bottom: none;
+}
+.second_container{
+	width: 100%;
+	height: auto;
+	font-size: 32px;
+	text-align: center;
+	margin-top: 40px;
+}
+.heart_second{
+	width: 1200px;
+	height: 400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.heart_in{
+	width: 86%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.heart_in div{
+	width: 38%;
+	border: 2px solid #d9d9d9;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.heart_in div div{
+    width: 100%;
+    height: 90%;
+}

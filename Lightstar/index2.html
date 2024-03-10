@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index2.css">
+    <link rel="stylesheet" href="style/logo.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="logo"></div>
+            <div class="search">
+                <input type="text" name="" id="">
+            </div>
+            <a href="index1.html" class="item_head">发起项目</a>
+            <a href="" id="login">登录</a>
+        </div>
+    </header>
+    <div class="nav">
+        <div class="navbar">
+            <li><a href="index.html"  id="Home">首页</a></li>
+            <li><a href="index2.html" class="active">商业</a></li>
+            <li>科技</li>
+            <li>文化</li>
+            <li>服务</li>
+            <li>即将结束</li>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <div class="left_top">
+                <!-- banner -->
+                <div class="max_box" id="banner_max">
+                    <div class="min_box" id="banner">
+                        <li class="banner_img">
+                            <img src="images/banner3.jpg" alt="">
+                        </li>
+                        <li class="banner_img">
+                            <img src="images/banner1.jpg" alt="">
+
+                        </li>
+                        <li class="banner_img">
+                            <img src="images/banner2.jpg" alt="">
+                        </li>
+                        <li class="banner_img">
+                            <img src="images/banner3.jpg" alt="">
+
+                        </li>
+                        <li class="banner_img">
+                            <img src="images/banner1.jpg" alt="">
+
+                        </li>
+                    </div>
+                    <p id="leftbtn"><</p>
+                    <p id="rightbtn">></p>
+                    <div class="btn_box">
+                        <span class="span"></span>
+                        <span class="span"></span>
+                        <span class="span"></span>
+                    </div>
+                </div>
+                <!-- banner end -->
+                <div class="jieshao">
+                    <p>"心柑情愿"特色农产品销售计划
+                    </p>
+                    <span>主要经营重庆市云阳县的各类特色农产品。以云阳特色柑橘、面条、糕点（桃片糕，赖桃酥等）为主。服务过程中可以提供特色手工创作包装～欢迎大家光临
+
+                    </span>
+                </div>
+            </div>
+            <div class="left_btm">
+                <div><p> </p></div>
+                <div class="img_box"></div>
+            </div>
+        </div>
+        <div class="right">
+            <p>用户评论</p>
+            <div class="right_bottom">
+                <div class="user">
+                    <div>
+                        <span>置顶</span>
+                        <span>头像</span>
+                    </div>
+                    <p>评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容
+                        评论内容评论内容
+                    </p>
+                </div>
+                <div class="user">
+                    <div>
+                        <span>置顶</span>
+                        <span>头像</span>
+                    </div>
+                    <p>评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容
+                        评论内容评论内容
+                    </p>
+                </div>
+                <div class="user">
+                    <div>
+                        <span>置顶</span>
+                        <span>头像</span>
+                    </div>
+                    <p>评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容
+                        评论内容评论内容
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot">
+            <div class="white_logo"></div>
+            <div class="end_massage">
+                <p>灯塔众星文化创意有限公司</p>
+                <p>公众号： 灯塔众星</p>
+                <p>地址：吉林省长春市</p> 
+            </div>
+        </div>
+    </footer>
+    <script >
+        // banner
+        var wbox = document.getElementById("banner_max");
+        var nbox = document.getElementById("banner");
+        var a = 1;
+        var s = 0;
+        var lock = true;
+        var lbtn = document.getElementById("leftbtn");
+        var rbtn = document.getElementById("rightbtn");
+        var spans = document.getElementsByClassName("span");
+
+        
+        //正轮播函数
+        function start(){
+            s++;
+            if(s>=3){
+                s = 0;
+            }
+            a++;
+            if(a == 5){
+                a = 1;
+                nbox.style.transition = "none";
+                setTimeout(
+                function(){
+                    nbox.style.transition = "all ease 0.3s"
+                    a = 2;
+                    nbox.style.right = a+"00%";
+                },10
+            )
+            nbox.style.right = a+"00%";
+            }
+            for(var i = 0;i < spans.length;i++){
+                spans[i].style.backgroundColor = "transparent";
+            }
+            spans[s].style.backgroundColor = "#fff";
+            nbox.style.right = a+"00%";
+        }
+        //倒轮播函数
+        //正轮播函数
+        function out(){
+            a--;
+            s--;
+            if(s ==-1){
+                s = 2;
+            }
+            if(a == -1){
+                a = 3;
+                nbox.style.transition = "none";
+                setTimeout(
+                function(){
+                    nbox.style.transition = "all ease 0.3s"
+                    a = 2;
+                    nbox.style.right = a+"00%";
+                },10
+            )
+                nbox.style.right = a+"00%";
+            }
+            for(var i = 0; i<spans.length;i++){
+                spans[i].style.backgroundColor = "transparent";
+            }
+            spans[s].style.backgroundColor = "#fff"
+            nbox.style.right = a+"00%";
+        }
+        //循环轮播
+       timer =  setInterval(
+            function(){
+                start();
+            },2000
+        )
+        //移入停止轮播
+        wbox.onmousemove = function(){
+            clearInterval(timer);
+        }
+        //移除开始轮播
+        wbox.onmouseout = function(){
+            timer =  setInterval(
+            function(){
+                start();
+            },2000
+        )
+        }
+        //左按钮点击
+        lbtn.onclick = function(){
+            if(lock == false)return;
+            lock = false;
+            out();
+            setTimeout(
+                function(){
+                    lock = true;
+                },500
+            )
+        }
+        //右按钮点击
+        rbtn.onclick = function(){
+            if(lock == false)return;
+            lock = false;
+            start();
+            setTimeout(
+                function(){
+                    lock = true;
+                },500
+            )
+        }
+
+        //
+        //四个按钮
+        for(var i = 0;i < spans.length;i++){
+            spans[0].onclick = function(){
+                for(var i = 0; i<spans.length;i++){
+                    spans[i].style.backgroundColor = "transparent"
+                }
+                a = 1;
+                nbox.style.right = a+"00%";
+                s = 0;
+                this.style.backgroundColor = "#fff"
+            }
+            spans[1].onclick = function(){
+                for(var i = 0; i<spans.length;i++){
+                    spans[i].style.backgroundColor = "transparent"
+                }
+                a = 2;
+                nbox.style.right = a+"00%";
+                s = 1;
+                this.style.backgroundColor = "#fff"
+            }
+            spans[2].onclick = function(){
+                for(var i = 0; i<spans.length;i++){
+                    spans[i].style.backgroundColor = "transparent"
+                }
+                a = 3;
+                nbox.style.right = a+"00%";
+                s = 2;
+                this.style.backgroundColor = "#fff"
+            }
+        }
+    </script>
+</body>
+</html>

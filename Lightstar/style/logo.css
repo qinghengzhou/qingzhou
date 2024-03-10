@@ -1,0 +1,12 @@
+.logo{
+    background: url(../images/logo.jpg) center no-repeat;
+    background-size: 100% auto;
+    height: 100px;
+    background-position: 0px -10px;
+}
+.white_logo{
+    background: url(../images/logo1.png) center no-repeat;
+    background-size: 100% auto;
+    height: 100px;
+    background-color: transparent;
+}
